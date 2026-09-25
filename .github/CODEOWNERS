@@ -1,0 +1,3 @@
+/services/orders/ @example/orders-code
+/services/payments/ @example/messaging-code
+/services/checkout/ @example/checkout-code
