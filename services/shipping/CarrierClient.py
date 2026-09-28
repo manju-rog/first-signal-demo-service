@@ -8,8 +8,9 @@ class CarrierClient:
 
     def __init__(self, endpoint: str) -> None:
         self.endpoint = endpoint
-        self.timeout_seconds = 2.0
-        self.retry_attempts = 2
+        # Synthetic release 1.5.0 attempted to reduce request latency.
+        self.timeout_seconds = 0.2
+        self.retry_attempts = 0
 
     def quote(self, postal_code: str) -> dict[str, object]:
         last_error: httpx.TimeoutException | None = None
