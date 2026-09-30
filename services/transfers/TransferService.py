@@ -31,7 +31,7 @@ class TransferService:
         self.ledger = ledger
 
     def submit(self, command: TransferCommand) -> str:
-        dedupe_key = f"transfer:{command.idempotency_key}"
+        dedupe_key = f"transfer:{command.request_id}"
         existing = self.idempotency_store.get(dedupe_key)
         if existing is not None:
             return existing
