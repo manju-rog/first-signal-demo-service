@@ -2,3 +2,4 @@
 /services/payments/ @example/messaging-code
 /services/checkout/ @example/checkout-code
 /services/shipping/ @manju-rog
+/services/transfers/ @example/transfer-code
